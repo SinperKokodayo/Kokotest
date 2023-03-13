@@ -1,0 +1,15 @@
+import discord
+from discord.ext import commands
+
+bot = commands.Bot(command_prefix='!')
+
+@bot.command()
+async def send_embed(ctx):
+    embed = discord.Embed(title="Sample Embed", description="This is a sample embed message.", color=0x00ff00)
+    embed.set_author(name="Your Bot Name", icon_url="https://example.com/boticon.png")
+    embed.add_field(name="Field Name 1", value="This is the value of field 1", inline=False)
+    embed.add_field(name="Field Name 2", value="This is the value of field 2", inline=True)
+    embed.set_footer(text="This is a sample footer.")
+    await ctx.send(embed=embed)
+
+bot.run('MTA2ODg4OTA2OTU3NDE3NjgyOA.GKJo4D.3xF4ornxkahtLbmKvt9nuHpMYnODrgXNsglTKU')
